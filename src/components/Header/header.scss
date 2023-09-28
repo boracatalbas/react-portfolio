@@ -1,0 +1,146 @@
+.header {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  grid-template-areas: "left right";
+
+  .react {
+    position: absolute;
+    top: 20vh;
+    left: 55vw;
+    width: 5vw;
+  }
+
+  .left {
+    grid-area: left;
+    margin-top: 33vh;
+    margin-left: 5vw;
+    padding-left: 1vw;
+    font-size: 1.5rem;
+    h1 span {
+      color: #0cfc95;
+      &:hover {
+        color: #00ccff;
+        transition: 0.5s;
+      }
+    }
+    h1 .line3 {
+      color: #00ccff;
+      &:hover {
+        color: #0cfc95;
+        transition: 0.5s;
+      }
+    }
+  }
+  .right {
+    grid-area: right;
+
+    img {
+      margin: 11vh 0 0 9vw;
+      min-width: 25%;
+      max-width: 60%;
+      border-radius: 10%;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .header {
+    margin-top: 5vh;
+    height: 90vh;
+    .react {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    grid-template-areas: "right left";
+    .left {
+      order: 2;
+      margin-top: 7vh;
+      font-size: 0.8rem;
+
+      line-height: 4vh;
+    }
+    .right {
+      order: 1;
+      img {
+        margin: 3vh 0 0 0;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .header {
+    .react {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20vh;
+    grid-template-areas: "right left";
+    .left {
+      order: 2;
+      margin-top: 3vh;
+      font-size: 0.7rem;
+      margin-right: 12vw;
+    }
+    .right {
+      order: 1;
+      img {
+        margin: 0 10vw 0 0;
+        width: 30vw;
+      }
+    }
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .header {
+    .react {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20vh;
+    grid-template-areas: "right left";
+    .left {
+      order: 2;
+      margin-top: 3vh;
+      font-size: 1rem;
+      margin-right: 12vw;
+    }
+    .right {
+      order: 1;
+      img {
+        margin: 0 10vw 0 0;
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .header {
+    .left {
+      margin-top: 36vh;
+      font-size: 1rem;
+    }
+    .right {
+      img {
+        margin-top: 27vh;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .header {
+    .right {
+      img {
+        margin-top: 20vh;
+      }
+    }
+  }
+}

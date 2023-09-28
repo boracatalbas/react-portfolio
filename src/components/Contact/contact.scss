@@ -1,0 +1,244 @@
+.contact {
+  display: grid;
+  height: 120vh;
+  grid-template-rows: 30% 20% 50%;
+  .string {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      position: relative;
+      bottom: 5vh;
+    }
+    h2::before,
+    h2::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 50%;
+      height: 1px;
+      background-color: #0cfc95;
+    }
+
+    h2::before {
+      left: 0;
+      transform: translateX(-110%);
+    }
+
+    h2::after {
+      right: 0;
+      transform: translateX(110%);
+    }
+  }
+  .boxes {
+    margin-left: 1.1vw;
+    margin-right: 2.1vw;
+    margin-bottom: 3vh;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    .box {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      justify-content: center;
+      border: solid 1px #0cfc95;
+      border-radius: 3%;
+      margin-left: 1vw;
+
+      &:hover {
+        background: rgb(42, 42, 42);
+        transition: 0.5s;
+      }
+    }
+  }
+  .footer {
+    margin-top: 3vh;
+    text-align: center;
+    iframe {
+      height: 80%;
+      width: 95%;
+    }
+    .copyright {
+      margin-top: 4vh;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact {
+    padding: 0 3vw;
+    display: flex;
+    flex-direction: column;
+    .string {
+      margin-top: 8vh;
+      h2::before,
+      h2::after {
+        display: none;
+      }
+      h1,
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      .box {
+        font-size: 0.8rem;
+        align-items: center;
+        text-align: center;
+        margin-top: 3vh;
+      }
+    }
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+
+    .string {
+      h2::before,
+      h2::after {
+        display: none;
+      }
+      h1,
+      h2 {
+        line-height: 5vh;
+        font-size: 1.4rem;
+      }
+    }
+    .boxes {
+      .box {
+        font-size: 0.6rem;
+      }
+    }
+    .footer {
+      iframe {
+        height: 45vh;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    .string {
+      h2::before,
+      h2::after {
+        display: none;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    .boxes {
+      .box {
+        font-size: 0.8rem;
+      }
+    }
+    .footer {
+      iframe {
+        height: 45vh;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .contact {
+    .string {
+      margin-top: 10vh;
+      line-height: 6vh;
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      h2::before,
+      h2::after {
+        display: none;
+      }
+    }
+    .boxes {
+      margin-top: 3vh;
+      margin-left: 10vw;
+      width: 78%;
+
+      .box {
+        font-size: 1rem;
+        .icon {
+          position: relative;
+          left: 2.6vw;
+        }
+      }
+    }
+  }
+  .footer {
+    margin: 10vh 0 0 10vw;
+
+    width: 80%;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  .contact {
+    text-align: center;
+
+    .boxes {
+      .box {
+        font-size: 1.2rem;
+        .icon {
+          margin-left: 1vw;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-left: 10vw;
+    width: 80%;
+    transition: 0.5s;
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 1900px) {
+  .contact {
+    text-align: center;
+
+    .boxes {
+      .box {
+        font-size: 1.5rem;
+        .icon {
+          margin-left: 1vw;
+        }
+      }
+    }
+  }
+  .footer {
+    transition: 0.5s;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .contact {
+    .boxes {
+      .box {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

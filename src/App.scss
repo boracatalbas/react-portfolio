@@ -1,0 +1,77 @@
+.App {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  background: rgb(7, 12, 16);
+  background: linear-gradient(
+    147deg,
+    rgba(7, 12, 16, 1) 23%,
+    rgba(10, 56, 89, 1) 100%
+  );
+
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(7, 12, 16);
+    background: linear-gradient(
+      147deg,
+      rgba(7, 12, 16, 1) 23%,
+      rgba(10, 56, 89, 1) 100%
+    );
+    color: black;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .App {
+    &.navbar-open {
+      .content {
+        display: none;
+      }
+      .navbar {
+        display: flex;
+      }
+    }
+    .content {
+      width: 100%;
+    }
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+
+    &.navbar-open {
+      .content {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .App {
+    display: flex;
+    justify-content: center;
+  }
+  .App.navbar-open .content {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .App {
+    grid-template-columns: 20% 80%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+}
